@@ -28,6 +28,8 @@ public class login extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel5 = new javax.swing.JLabel();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jDesktopPane2 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -39,8 +41,31 @@ public class login extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/Black Grey Minimalist Book Club Logo.png"))); // NOI18N
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDesktopPane2Layout = new javax.swing.GroupLayout(jDesktopPane2);
+        jDesktopPane2.setLayout(jDesktopPane2Layout);
+        jDesktopPane2Layout.setHorizontalGroup(
+            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jDesktopPane2Layout.setVerticalGroup(
+            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,7 +103,7 @@ public class login extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton1.setText("LogIn");
         jPanel1.add(jButton1);
-        jButton1.setBounds(640, 240, 90, 40);
+        jButton1.setBounds(640, 250, 110, 31);
 
         jButton2.setBackground(new java.awt.Color(204, 153, 255));
         jButton2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -89,7 +114,7 @@ public class login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(500, 240, 90, 40);
+        jButton2.setBounds(500, 250, 100, 31);
 
         jPasswordField1.setBackground(new java.awt.Color(204, 153, 255));
         jPasswordField1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -101,6 +126,8 @@ public class login extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(-60, 0, 440, 460);
 
+        jButton3.setBackground(new java.awt.Color(204, 153, 255));
+        jButton3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton3.setText("REGISTER");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -113,7 +140,13 @@ public class login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(570, 310, 90, 30);
+        jButton3.setBounds(500, 300, 130, 30);
+
+        jComboBox1.setBackground(new java.awt.Color(204, 153, 255));
+        jComboBox1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User" }));
+        jPanel1.add(jComboBox1);
+        jComboBox1.setBounds(660, 300, 90, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -181,6 +214,9 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
