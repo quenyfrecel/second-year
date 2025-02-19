@@ -5,6 +5,13 @@
  */
 package library;
 
+import config.connectDB;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Shane
@@ -35,13 +42,13 @@ public class login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        user = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        pass = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        role = new javax.swing.JComboBox<>();
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/Black Grey Minimalist Book Club Logo.png"))); // NOI18N
 
@@ -93,20 +100,30 @@ public class login extends javax.swing.JFrame {
         jPanel1.add(jLabel6);
         jLabel6.setBounds(390, 130, 110, 40);
 
-        jTextField2.setBackground(new java.awt.Color(204, 153, 255));
-        jTextField2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(500, 130, 250, 40);
+        user.setBackground(new java.awt.Color(204, 153, 255));
+        user.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        user.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        user.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userActionPerformed(evt);
+            }
+        });
+        jPanel1.add(user);
+        user.setBounds(500, 130, 250, 40);
 
         jButton1.setBackground(new java.awt.Color(204, 153, 255));
-        jButton1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton1.setText("LogIn");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
-        jButton1.setBounds(640, 250, 110, 31);
+        jButton1.setBounds(650, 250, 100, 30);
 
         jButton2.setBackground(new java.awt.Color(204, 153, 255));
-        jButton2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton2.setText("Exit");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,21 +131,21 @@ public class login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(500, 250, 100, 31);
+        jButton2.setBounds(500, 250, 100, 30);
 
-        jPasswordField1.setBackground(new java.awt.Color(204, 153, 255));
-        jPasswordField1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(500, 190, 250, 40);
+        pass.setBackground(new java.awt.Color(204, 153, 255));
+        pass.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel1.add(pass);
+        pass.setBounds(500, 190, 250, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/Black Grey Minimalist Book Club Logo.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(-60, 0, 440, 460);
 
         jButton3.setBackground(new java.awt.Color(204, 153, 255));
-        jButton3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jButton3.setText("REGISTER");
+        jButton3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jButton3.setText("Register");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
@@ -140,13 +157,13 @@ public class login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(500, 300, 130, 30);
+        jButton3.setBounds(500, 300, 100, 30);
 
-        jComboBox1.setBackground(new java.awt.Color(204, 153, 255));
-        jComboBox1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User" }));
-        jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(660, 300, 90, 30);
+        role.setBackground(new java.awt.Color(204, 153, 255));
+        role.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        role.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User" }));
+        jPanel1.add(role);
+        role.setBounds(650, 300, 100, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,6 +177,7 @@ public class login extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -171,9 +189,71 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-       new registration().setVisible(true); 
-    this.dispose();
+        Registratio rt = new Registratio();
+        rt.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String username = user.getText();
+String password = new String(pass.getPassword());
+String selectedRole = role.getSelectedItem().toString(); // Get selected role
+
+if (username.isEmpty() || password.isEmpty()) {
+    JOptionPane.showMessageDialog(this, "Please enter both username and password.", "Login Error", JOptionPane.ERROR_MESSAGE);
+    return;
+}
+
+connectDB conf = new connectDB(); // Create an instance of dbConnector
+Connection con = conf.getConnection(); // Get connection
+
+String sql = "SELECT password, role FROM users WHERE username = ?";
+
+try {
+    PreparedStatement pst = con.prepareStatement(sql);
+    pst.setString(1, username);
+    ResultSet rs = pst.executeQuery();
+
+    if (rs.next()) {
+        String storedPassword = rs.getString("password");
+        String roleFromDB = rs.getString("role");
+
+        if (storedPassword.equals(password)) { // Ensure proper hashing if applicable
+            if (roleFromDB.equalsIgnoreCase(selectedRole)) { 
+                JOptionPane.showMessageDialog(this, "Login successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+                // Redirect based on role
+                if ("Admin".equalsIgnoreCase(roleFromDB)) {
+                    dashboard admin = new dashboard();
+                    admin.setVisible(true);
+                } else if ("User".equalsIgnoreCase(roleFromDB)) {
+                    dashboardstaff staff = new dashboardstaff();
+                    staff.setVisible(true);
+                }
+
+                this.dispose(); // Close login form
+            } else {
+                JOptionPane.showMessageDialog(this, "Incorrect role selection!", "Login Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Invalid username or password.", "Login Error", JOptionPane.ERROR_MESSAGE);
+        }
+    } else {
+        JOptionPane.showMessageDialog(this, "Invalid username or password.", "Login Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+    rs.close();
+    pst.close();
+    con.close();
+} catch (SQLException ex) {
+    JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+}
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -214,7 +294,6 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JLabel jLabel1;
@@ -224,7 +303,8 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPasswordField pass;
+    private javax.swing.JComboBox<String> role;
+    private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }
