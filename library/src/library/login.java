@@ -76,7 +76,7 @@ public class login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(153, 0, 153));
+        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
         jPanel1.setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(204, 102, 255));
@@ -90,18 +90,17 @@ public class login extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(430, 40, 330, 50);
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel4.setText("Password:");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(390, 190, 110, 40);
 
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel6.setText("User Name:");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(390, 130, 110, 40);
 
-        user.setBackground(new java.awt.Color(204, 153, 255));
-        user.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        user.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         user.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,8 +110,8 @@ public class login extends javax.swing.JFrame {
         jPanel1.add(user);
         user.setBounds(500, 130, 250, 40);
 
-        jButton1.setBackground(new java.awt.Color(204, 153, 255));
-        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1.setText("LogIn");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,10 +119,10 @@ public class login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(650, 250, 100, 30);
+        jButton1.setBounds(670, 250, 80, 30);
 
-        jButton2.setBackground(new java.awt.Color(204, 153, 255));
-        jButton2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton2.setText("Exit");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,10 +130,9 @@ public class login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(500, 250, 100, 30);
+        jButton2.setBounds(500, 250, 80, 30);
 
-        pass.setBackground(new java.awt.Color(204, 153, 255));
-        pass.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        pass.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel1.add(pass);
         pass.setBounds(500, 190, 250, 40);
@@ -143,7 +141,7 @@ public class login extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(-60, 0, 440, 460);
 
-        jButton3.setBackground(new java.awt.Color(204, 153, 255));
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton3.setText("Register");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -159,8 +157,7 @@ public class login extends javax.swing.JFrame {
         jPanel1.add(jButton3);
         jButton3.setBounds(500, 300, 100, 30);
 
-        role.setBackground(new java.awt.Color(204, 153, 255));
-        role.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        role.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         role.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User" }));
         jPanel1.add(role);
         role.setBounds(650, 300, 100, 30);

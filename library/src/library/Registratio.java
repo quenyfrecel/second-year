@@ -48,7 +48,7 @@ public class Registratio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(153, 0, 153));
+        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
         jPanel1.setLayout(null);
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -63,8 +63,7 @@ public class Registratio extends javax.swing.JFrame {
         jPanel1.add(jLabel7);
         jLabel7.setBounds(360, 80, 110, 30);
 
-        em.setBackground(new java.awt.Color(204, 153, 255));
-        em.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        em.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         em.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         em.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,8 +73,7 @@ public class Registratio extends javax.swing.JFrame {
         jPanel1.add(em);
         em.setBounds(490, 200, 260, 30);
 
-        fn.setBackground(new java.awt.Color(204, 153, 255));
-        fn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        fn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         fn.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         fn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,8 +83,7 @@ public class Registratio extends javax.swing.JFrame {
         jPanel1.add(fn);
         fn.setBounds(490, 80, 260, 30);
 
-        ln.setBackground(new java.awt.Color(204, 153, 255));
-        ln.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        ln.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         ln.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ln.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,8 +93,7 @@ public class Registratio extends javax.swing.JFrame {
         jPanel1.add(ln);
         ln.setBounds(490, 120, 260, 30);
 
-        un.setBackground(new java.awt.Color(204, 153, 255));
-        un.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        un.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         un.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         un.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,14 +103,12 @@ public class Registratio extends javax.swing.JFrame {
         jPanel1.add(un);
         un.setBounds(490, 160, 260, 30);
 
-        cp.setBackground(new java.awt.Color(204, 153, 255));
-        cp.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        cp.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         cp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel1.add(cp);
         cp.setBounds(490, 280, 260, 30);
 
-        pw.setBackground(new java.awt.Color(204, 153, 255));
-        pw.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        pw.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         pw.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel1.add(pw);
         pw.setBounds(490, 240, 260, 30);
@@ -149,7 +143,7 @@ public class Registratio extends javax.swing.JFrame {
         jPanel1.add(jLabel9);
         jLabel9.setBounds(340, 280, 170, 30);
 
-        jButton1.setBackground(new java.awt.Color(204, 153, 255));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1.setText("Cancel");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -165,7 +159,7 @@ public class Registratio extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(490, 360, 90, 30);
 
-        jButton2.setBackground(new java.awt.Color(204, 153, 255));
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton2.setText("Register");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
