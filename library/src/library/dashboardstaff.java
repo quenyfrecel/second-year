@@ -32,6 +32,7 @@ public class dashboardstaff extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        mainDesktop = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,6 +56,22 @@ public class dashboardstaff extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 110, 420);
+
+        mainDesktop.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout mainDesktopLayout = new javax.swing.GroupLayout(mainDesktop);
+        mainDesktop.setLayout(mainDesktopLayout);
+        mainDesktopLayout.setHorizontalGroup(
+            mainDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 610, Short.MAX_VALUE)
+        );
+        mainDesktopLayout.setVerticalGroup(
+            mainDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 420, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(mainDesktop);
+        mainDesktop.setBounds(110, 0, 610, 420);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,5 +128,6 @@ public class dashboardstaff extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JDesktopPane mainDesktop;
     // End of variables declaration//GEN-END:variables
 }
