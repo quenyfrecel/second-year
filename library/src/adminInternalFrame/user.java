@@ -35,10 +35,11 @@ public class user extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         user = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         users_tbl = new javax.swing.JTable();
 
-        user.setBackground(new java.awt.Color(204, 204, 255));
+        user.setBackground(new java.awt.Color(204, 153, 255));
         user.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         users_tbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -54,7 +55,9 @@ public class user extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(users_tbl);
 
-        user.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 590, 290));
+        jScrollPane2.setViewportView(jScrollPane1);
+
+        user.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 610, 320));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -75,6 +78,7 @@ public class user extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel user;
     private javax.swing.JTable users_tbl;
     // End of variables declaration//GEN-END:variables

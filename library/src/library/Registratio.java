@@ -110,6 +110,11 @@ public class Registratio extends javax.swing.JFrame {
 
         pw.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         pw.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pw.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pwActionPerformed(evt);
+            }
+        });
         jPanel1.add(pw);
         pw.setBounds(490, 240, 260, 30);
 
@@ -258,7 +263,7 @@ public class Registratio extends javax.swing.JFrame {
                 // Validate password strength
             else {
                 String password = pw.getText();
-                String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@#$%^&+=!]).{8,}$";
+                String passwordRegex = "^(?=.*[a-z])(?=.*[a-z])(?=.*\\d)(?=.*[@#$%^&+=!]).{8,}$";
 
             if (!password.matches(passwordRegex)) {
                 JOptionPane.showMessageDialog(null, "Password must be at least 8 characters and include:\n- One uppercase letter\n- One lowercase letter\n- One number\n- One special character (@#$%^&+=!)", 
@@ -286,6 +291,10 @@ public class Registratio extends javax.swing.JFrame {
            }
        }
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void pwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwActionPerformed
 
     /**
      * @param args the command line arguments
